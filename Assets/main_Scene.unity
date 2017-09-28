@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 1949437497}
   - component: {fileID: 1949437498}
   m_Layer: 0
-  m_Name: "\uBE44\uD589\uAE30 (2)"
+  m_Name: Plane(2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
