@@ -14,6 +14,7 @@ public class move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(move_sp, 0, 0);
@@ -33,7 +34,7 @@ public class move : MonoBehaviour
         {
             transform.Translate(0, -move_sp, 0);
         }
-        
+
     }
 }
 
