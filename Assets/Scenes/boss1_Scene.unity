@@ -320,10 +320,12 @@ MonoBehaviour:
   BossHP: 150
   Phase2HP: 0
   Phase3HP: 0
-  Shot: 100
-  Speed: 50
+  Shot: 50
+  Speed: 100
   bullet: {fileID: 872321138}
   Boss1: {fileID: 1781002000}
+  ShotAngle: 0.01
+  rotate: 0
 --- !u!212 &1781002002
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -373,7 +375,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1781002000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11, y: -2.11, z: 0}
+  m_LocalPosition: {x: 0.04, y: 0.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
