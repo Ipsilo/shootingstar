@@ -1,0 +1,37 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Enemy : MonoBehaviour{
+	public int HP;
+<<<<<<< HEAD
+	private Enemy_Data enemyData;
+
+
+	void Start(){
+		enemyData = new Enemy_Data (HP);
+	}
+	void Update(){
+		if (enemyData.getHP () <= 0) {
+			Destroy (gameObject);
+		}
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision){
+		if (collision.CompareTag ("Player Missile")) {
+			Debug.Log ("미사일과 충돌");
+			enemyData.decreaseHP (10);
+		}
+	}
+}
+=======
+	private Boss_Data enemyData;
+
+	void Start(){
+		enemyData = new Boss_Data (HP);
+		/*Debug.Log (GameObject. + "의 체력 :" + enemyData.getHP ());*/
+	}
+
+	void Update(){}
+}
+>>>>>>> 0ae9ee99129dd422443842e25169ac66891ada47
