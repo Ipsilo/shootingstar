@@ -49,4 +49,5 @@ public class Missile_Fire : MonoBehaviour
 		// FireState를 true로 만든다.
 		FireState = true;
 	}
+
 }
