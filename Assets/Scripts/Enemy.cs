@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour{
 	public int HP;
-<<<<<<< HEAD
+
 	private Enemy_Data enemyData;
 
 
@@ -24,14 +24,3 @@ public class Enemy : MonoBehaviour{
 		}
 	}
 }
-=======
-	private Boss_Data enemyData;
-
-	void Start(){
-		enemyData = new Boss_Data (HP);
-		/*Debug.Log (GameObject. + "의 체력 :" + enemyData.getHP ());*/
-	}
-
-	void Update(){}
-}
->>>>>>> 0ae9ee99129dd422443842e25169ac66891ada47
