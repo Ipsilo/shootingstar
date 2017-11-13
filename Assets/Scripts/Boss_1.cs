@@ -19,6 +19,8 @@ public class Boss_1 : MonoBehaviour
     Coroutine spell1;
     Coroutine spell2;
     Coroutine spell3;
+    Coroutine spell4;
+    GameObject obj;
 
     // Use this for initialization
     void Start()
@@ -44,9 +46,15 @@ public class Boss_1 : MonoBehaviour
         if (bossData.getHP() < phase3HP && level == 3)
         {
             StopCoroutine(spell2);
-            StartCoroutine(BulletSpell1());
-            StartCoroutine(BulletSpell3());
+            spell3 = StartCoroutine(BulletSpell1());
+            spell4 = StartCoroutine(BulletSpell3());
             level++;
+        }
+        if (bossData.getHP() == 0)
+        {
+            StopCoroutine(spell3);
+            StopCoroutine(spell4);
+            Destroy(boss1);
         }
     }
 
@@ -65,7 +73,6 @@ public class Boss_1 : MonoBehaviour
             yield return new WaitForSeconds(1.2f);
             for (int i = 0; i < shot; i++)
             {
-                GameObject obj;
                 //탄 생성
                 obj = (GameObject)Instantiate(bullet, boss1.transform.position, Quaternion.identity);
 
@@ -76,7 +83,6 @@ public class Boss_1 : MonoBehaviour
             yield return new WaitForSeconds(1.2f);
             for (int i = 0; i < shot; i++)
             {
-                GameObject obj;
                 obj = (GameObject)Instantiate(bullet, boss1.transform.position, Quaternion.identity);
 
                 //bullet생성 위치를 바꾸고 원형으로 발사
@@ -93,7 +99,6 @@ public class Boss_1 : MonoBehaviour
         rotate = 0;
         do
         {
-            GameObject obj;
             obj = Instantiate(bullet, boss1.transform.position, Quaternion.identity);
 
             //bullet을 생성
@@ -133,17 +138,15 @@ public class Boss_1 : MonoBehaviour
 
     IEnumerator BulletSpell3()
     {
-        Rigidbody2D temp;
-        GameObject obj;
         Vector2 v;
         do
         {
             //탄 생성
             obj = (GameObject)Instantiate(bullet, boss1.transform.position, Quaternion.identity);
 
-            v = plane.transform.position;
+            v = plane.transform.position - boss1.transform.position;
             obj.GetComponent<Rigidbody2D>().AddForce(v.normalized * speed);
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.35f);
         } while (true);
     }
 }

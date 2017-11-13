@@ -152,6 +152,21 @@ Prefab:
       propertyPath: plane
       value: 
       objectReference: {fileID: 1109443170}
+    - target: {fileID: 114538471212307124, guid: fe5b14c2af4f5dc498ad88d678b990c3,
+        type: 2}
+      propertyPath: bossHP
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 114538471212307124, guid: fe5b14c2af4f5dc498ad88d678b990c3,
+        type: 2}
+      propertyPath: phase2HP
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 114538471212307124, guid: fe5b14c2af4f5dc498ad88d678b990c3,
+        type: 2}
+      propertyPath: phase3HP
+      value: 70
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe5b14c2af4f5dc498ad88d678b990c3, type: 2}
   m_IsPrefabParent: 0
@@ -257,7 +272,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4155165705456382, guid: b416ae9adf9fc0a479f34c189bd944f9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.69
+      value: -1.39
       objectReference: {fileID: 0}
     - target: {fileID: 4155165705456382, guid: b416ae9adf9fc0a479f34c189bd944f9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -354,4 +369,4 @@ MonoBehaviour:
   PlayerMissile: {fileID: 1491337134772974, guid: fb4b863c3f7745c40ba22a13be06d7a4,
     type: 2}
   MissileLocation: {fileID: 871813211}
-  FireDelay: 0.5
+  FireDelay: 0.2
