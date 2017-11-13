@@ -32,17 +32,20 @@ public class Boss_1 : MonoBehaviour
 
     void Update()
     {
+        //1패턴 시작
         if (bossData.getHP() == bossHP && level == 1)
         {
             spell1 = StartCoroutine(BulletSpell1());
             level++;
         }
+        //1패턴 종료후 2패턴 시작
         if (bossData.getHP() < phase2HP && level == 2)
         {
             StopCoroutine(spell1);
             spell2 = StartCoroutine(BulletSpell2());
             level++;
         }
+        //2패턴 종료후 1,3패턴 시작
         if (bossData.getHP() < phase3HP && level == 3)
         {
             StopCoroutine(spell2);
@@ -50,7 +53,8 @@ public class Boss_1 : MonoBehaviour
             spell4 = StartCoroutine(BulletSpell3());
             level++;
         }
-        if (bossData.getHP() == 0)
+        //체력이 0보다 낮으면 1,3패턴 종료후 오브젝트  제거
+        if (bossData.getHP() <= 0)
         {
             StopCoroutine(spell3);
             StopCoroutine(spell4);
@@ -60,12 +64,14 @@ public class Boss_1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        //Player Missile 태그를 가진 오브젝트와 충돌시 HP감소
         if(col.CompareTag("Player Missile"))
         {
             bossData.decreaseHP(2);
             Debug.Log(gameObject.name + "의 체력: " + bossData.getHP());
         }
     }
+
     IEnumerator BulletSpell1()
     {
         do
@@ -73,7 +79,7 @@ public class Boss_1 : MonoBehaviour
             yield return new WaitForSeconds(1.2f);
             for (int i = 0; i < shot; i++)
             {
-                //탄 생성
+                //보스 위치에 탄 생성
                 obj = (GameObject)Instantiate(bullet, boss1.transform.position, Quaternion.identity);
 
                 //bullet을 원형으로 발사
@@ -85,7 +91,7 @@ public class Boss_1 : MonoBehaviour
             {
                 obj = (GameObject)Instantiate(bullet, boss1.transform.position, Quaternion.identity);
 
-                //bullet생성 위치를 바꾸고 원형으로 발사
+                //각도를 수정해서 bullet을 원형으로 발사
                 obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(speed * Mathf.Cos(Mathf.PI * 2 * i / shot + Mathf.PI / 2), speed * Mathf.Sin(Mathf.PI * i * 2 / shot + Mathf.PI / 2)));
             }
         } while (true);
@@ -101,7 +107,6 @@ public class Boss_1 : MonoBehaviour
         {
             obj = Instantiate(bullet, boss1.transform.position, Quaternion.identity);
 
-            //bullet을 생성
             obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(speed * Mathf.Cos(Mathf.PI * angle), speed * Mathf.Sin(Mathf.PI * angle)));
 
             if (angle > 2)
@@ -110,13 +115,16 @@ public class Boss_1 : MonoBehaviour
             }
             if (angle < 2)
             {
+                //발사 각도
                 angle += shotAngle;
             }
+
             if (rotate == 0)
             {
+                //각속도 증가
                 shotAngle += shotAngleRate;
-                shotAngleRate += shotAngleRate / 100;
-                if (shotAngle > 0.999)
+                shotAngleRate += shotAngleRate / 300;
+                if (shotAngle > 0.35)
                 {
                     rotate = 1;
                 }
@@ -124,8 +132,9 @@ public class Boss_1 : MonoBehaviour
 
             if (rotate == 1)
             {
+                //각속도 감소
                 shotAngle -= shotAngleRate;
-                shotAngleRate -= shotAngleRate / 100;
+                shotAngleRate -= shotAngleRate / 300;
                 if (shotAngle < 0.1)
                 {
                     rotate = 0;
@@ -141,9 +150,9 @@ public class Boss_1 : MonoBehaviour
         Vector2 v;
         do
         {
-            //탄 생성
             obj = (GameObject)Instantiate(bullet, boss1.transform.position, Quaternion.identity);
 
+            //플레이어가 있던 위치로 탄 발사
             v = plane.transform.position - boss1.transform.position;
             obj.GetComponent<Rigidbody2D>().AddForce(v.normalized * speed);
             yield return new WaitForSeconds(0.35f);

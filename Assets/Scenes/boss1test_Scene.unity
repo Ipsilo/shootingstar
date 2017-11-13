@@ -154,18 +154,8 @@ Prefab:
       objectReference: {fileID: 1109443170}
     - target: {fileID: 114538471212307124, guid: fe5b14c2af4f5dc498ad88d678b990c3,
         type: 2}
-      propertyPath: bossHP
-      value: 220
-      objectReference: {fileID: 0}
-    - target: {fileID: 114538471212307124, guid: fe5b14c2af4f5dc498ad88d678b990c3,
-        type: 2}
       propertyPath: phase2HP
-      value: 140
-      objectReference: {fileID: 0}
-    - target: {fileID: 114538471212307124, guid: fe5b14c2af4f5dc498ad88d678b990c3,
-        type: 2}
-      propertyPath: phase3HP
-      value: 70
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe5b14c2af4f5dc498ad88d678b990c3, type: 2}
