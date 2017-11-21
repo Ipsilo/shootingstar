@@ -155,7 +155,17 @@ Prefab:
     - target: {fileID: 114538471212307124, guid: fe5b14c2af4f5dc498ad88d678b990c3,
         type: 2}
       propertyPath: phase2HP
-      value: 90
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114538471212307124, guid: fe5b14c2af4f5dc498ad88d678b990c3,
+        type: 2}
+      propertyPath: bossHP
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114538471212307124, guid: fe5b14c2af4f5dc498ad88d678b990c3,
+        type: 2}
+      propertyPath: phase3HP
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe5b14c2af4f5dc498ad88d678b990c3, type: 2}

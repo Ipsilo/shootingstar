@@ -65,7 +65,7 @@ public class Boss_1 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         //Player Missile 태그를 가진 오브젝트와 충돌시 HP감소
-        if(col.CompareTag("Player Missile"))
+        if(col.CompareTag("Missile"))
         {
             bossData.decreaseHP(2);
             Debug.Log(gameObject.name + "의 체력: " + bossData.getHP());
