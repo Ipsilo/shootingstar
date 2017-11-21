@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1783465033995532}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12, y: 5.86, z: -82.34364}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.09, y: 6.6, z: 0}
+  m_LocalScale: {x: 0.70439005, y: 0.68652076, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -104,14 +104,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c388ef6e353dc42b24b94e6d46034e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossHP: 100
-  phase2HP: 70
-  phase3HP: 50
+  bossHP: 30
+  phase2HP: 20
+  phase3HP: 10
   shot: 50
   speed: 100
   bullet: {fileID: 1309966409031316, guid: ac058a35bf7905f4daa413f57fb4c5d7, type: 2}
   boss1: {fileID: 1783465033995532}
-  plane: {fileID: 1507758412787382, guid: b416ae9adf9fc0a479f34c189bd944f9, type: 2}
+  plane: {fileID: 0}
   shotAngle: 0.05
   shotAngleRate: 0.0001
 --- !u!212 &212880829965178512
