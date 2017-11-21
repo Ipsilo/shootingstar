@@ -16,7 +16,7 @@ public class Enemy_Bullet : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        //Player Missile 태그를 가진 오브젝트와 충돌시 HP감소
+        //Player Missile 태그를 가진 오브젝트와 충돌시 오브젝트 삭제
         if (col.CompareTag("Player"))
         {
             Debug.Log("플레이어와 충돌");
@@ -24,8 +24,17 @@ public class Enemy_Bullet : MonoBehaviour {
         }
     }
 
+    private void Bulletclear()
+    {
+        if (GameObject.Find("Boss1") == false)
+        {
+            Debug.Log("clear");
+            Destroy(this.gameObject);
+        }
+    }
+
     // Update is called once per frame
     void Update () {
-		
-	}
+        Bulletclear();
+    }
 }
