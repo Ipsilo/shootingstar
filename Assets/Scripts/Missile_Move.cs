@@ -15,8 +15,8 @@ public class Missile_Move : MonoBehaviour
 		if(transform.position.y >= DestroyYPos)
 		{
 			// 미사일을 제거
-			Destroy(gameObject); //<--단순 미사일 제거
-			//GetComponent<Collider2D>().enabled=false;
+			//Destroy(gameObject); //<--단순 미사일 제거
+			GetComponent<Collider2D>().enabled=false;
 		}
 	}
 
@@ -24,8 +24,8 @@ public class Missile_Move : MonoBehaviour
 		//부딪히는 collision을 가진 객체의 Tag가 Enemy일 경우
 		if (collision.CompareTag ("Enemy")) {
 			Debug.Log ("적 기체와 충돌");
-            //GetComponent<Collider2D> ().enabled = false;
-            Destroy(gameObject);
+            GetComponent<Collider2D> ().enabled = false;
+            //Destroy(gameObject);
         }
 	}
 
