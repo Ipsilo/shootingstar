@@ -13,6 +13,7 @@ public class Boss_1 : MonoBehaviour
     public GameObject bullet;
     public GameObject boss1;
     public GameObject plane;
+    public GameObject explosion;
     public float shotAngle;
     public float shotAngleRate;
     private int level;
@@ -58,6 +59,8 @@ public class Boss_1 : MonoBehaviour
         {
             StopCoroutine(spell3);
             StopCoroutine(spell4);
+            Instantiate(explosion,boss1.transform.position,Quaternion.identity);
+            Destroy(explosion);
             Destroy(boss1);
         }
     }
@@ -67,7 +70,7 @@ public class Boss_1 : MonoBehaviour
         //Missile 태그를 가진 오브젝트와 충돌시 HP감소
         if(col.CompareTag("Missile"))
         {
-            bossData.decreaseHP(2);
+            bossData.decreaseHP(1);
             Debug.Log(gameObject.name + "의 체력: " + bossData.getHP());
         }
     }
@@ -123,8 +126,8 @@ public class Boss_1 : MonoBehaviour
             {
                 //각속도 증가
                 shotAngle += shotAngleRate;
-                shotAngleRate += shotAngleRate / 300;
-                if (shotAngle > 0.35)
+                shotAngleRate += shotAngleRate / 500;
+                if (shotAngle > 0.15)
                 {
                     rotate = 1;
                 }
@@ -134,8 +137,8 @@ public class Boss_1 : MonoBehaviour
             {
                 //각속도 감소
                 shotAngle -= shotAngleRate;
-                shotAngleRate -= shotAngleRate / 300;
-                if (shotAngle < 0.1)
+                shotAngleRate -= shotAngleRate / 500;
+                if (shotAngle < 0.05)
                 {
                     rotate = 0;
                 }
@@ -148,6 +151,7 @@ public class Boss_1 : MonoBehaviour
     IEnumerator BulletSpell3()
     {
         Vector2 v;
+        float digree;
         do
         {
             obj = (GameObject)Instantiate(bullet, boss1.transform.position, Quaternion.identity);
@@ -155,7 +159,7 @@ public class Boss_1 : MonoBehaviour
             //플레이어가 있던 위치로 탄 발사
             v = plane.transform.position - boss1.transform.position;
             obj.GetComponent<Rigidbody2D>().AddForce(v.normalized * speed);
-            yield return new WaitForSeconds(0.35f);
+            yield return new WaitForSeconds(0.25f);
         } while (true);
     }
 }

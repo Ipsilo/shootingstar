@@ -16,10 +16,9 @@ public class Enemy_Bullet : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        //Player Missile 태그를 가진 오브젝트와 충돌시 오브젝트 삭제
+        //Player태그를 가진 오브젝트와 충돌시 오브젝트 삭제
         if (col.CompareTag("Player"))
         {
-            Debug.Log("플레이어와 충돌");
             Destroy(this.gameObject);
         }
     }

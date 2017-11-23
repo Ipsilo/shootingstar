@@ -117,15 +117,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4855410376061360, guid: fe5b14c2af4f5dc498ad88d678b990c3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.12
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 4855410376061360, guid: fe5b14c2af4f5dc498ad88d678b990c3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.86
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 4855410376061360, guid: fe5b14c2af4f5dc498ad88d678b990c3, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -82.34364
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4855410376061360, guid: fe5b14c2af4f5dc498ad88d678b990c3, type: 2}
       propertyPath: m_LocalRotation.x
@@ -149,24 +149,24 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114538471212307124, guid: fe5b14c2af4f5dc498ad88d678b990c3,
         type: 2}
-      propertyPath: plane
-      value: 
-      objectReference: {fileID: 1109443170}
-    - target: {fileID: 114538471212307124, guid: fe5b14c2af4f5dc498ad88d678b990c3,
-        type: 2}
       propertyPath: phase2HP
-      value: 20
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114538471212307124, guid: fe5b14c2af4f5dc498ad88d678b990c3,
         type: 2}
       propertyPath: bossHP
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114538471212307124, guid: fe5b14c2af4f5dc498ad88d678b990c3,
         type: 2}
       propertyPath: phase3HP
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114538471212307124, guid: fe5b14c2af4f5dc498ad88d678b990c3,
+        type: 2}
+      propertyPath: plane
+      value: 
+      objectReference: {fileID: 1109443170}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe5b14c2af4f5dc498ad88d678b990c3, type: 2}
   m_IsPrefabParent: 0
@@ -268,11 +268,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4155165705456382, guid: b416ae9adf9fc0a479f34c189bd944f9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.03
+      value: 0.156
       objectReference: {fileID: 0}
     - target: {fileID: 4155165705456382, guid: b416ae9adf9fc0a479f34c189bd944f9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.39
+      value: -1.764
       objectReference: {fileID: 0}
     - target: {fileID: 4155165705456382, guid: b416ae9adf9fc0a479f34c189bd944f9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -300,11 +300,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4155165705456382, guid: b416ae9adf9fc0a479f34c189bd944f9, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.30369
+      value: 0.15120575
       objectReference: {fileID: 0}
     - target: {fileID: 4155165705456382, guid: b416ae9adf9fc0a479f34c189bd944f9, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.5284
+      value: 0.26391426
       objectReference: {fileID: 0}
     - target: {fileID: 1507758412787382, guid: b416ae9adf9fc0a479f34c189bd944f9, type: 2}
       propertyPath: m_Name
@@ -369,4 +369,30 @@ MonoBehaviour:
   PlayerMissile: {fileID: 1491337134772974, guid: fb4b863c3f7745c40ba22a13be06d7a4,
     type: 2}
   MissileLocation: {fileID: 871813211}
-  FireDelay: 0.2
+  FireDelay: 0.25
+--- !u!70 &1109443173
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1109443170}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0011344049, y: -0.02585154}
+  m_Size: {x: 0.80524397, y: 1.4521555}
+  m_Direction: 0
+--- !u!114 &1109443176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1109443170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c77618490c71d640a63298d1d427448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
