@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 50739565284631730}
   m_Layer: 0
   m_Name: PlayerMissile
-  m_TagString: Missile
+  m_TagString: Player Missile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,8 +104,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Offset: {x: -0.004874125, y: -0.00000017881393}
+  m_Size: {x: 0.27579096, y: 0.3566178}
   m_Direction: 0
 --- !u!114 &114923744084838764
 MonoBehaviour:
