@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
+
 
 
 
@@ -11,16 +11,16 @@ public class DamagePlayer : MonoBehaviour {
 
     void start()
     {
-        print(playerHealth);
+        Debug.Log(playerHealth);
 
     }
 
     void OnCollisionEnter(Collision _colision)
     {
-        if (_colision.gameObject.tag == "Enemy")
+        if (_colision.gameObject.tag == "Bullet")
         {
             playerHealth -= damage;
-            print("enemy just touched something weird");
+            Debug.Log("enemy just touched something weird");
         }
     }
 

@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
         if (col.CompareTag("Bullet"))
         {
             Debug.Log("불릿과 충돌");
-            Destroy(this.gameObject);
+            GameControll.health -= 1;
         }
     }
 
