@@ -8,7 +8,7 @@ public class random_spawn : MonoBehaviour {
                            
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", 1.5f, 1.5f); //1.5초후 부터, SpawnEnemy함수를 1.5초마다 반복해서 실행 시킵니다.
+        InvokeRepeating("SpawnEnemy", 1.5f, 0.5f); //1.5초후 부터, SpawnEnemy함수를 1.5초마다 반복해서 실행 시킵니다.
     }
     void Update()
     {

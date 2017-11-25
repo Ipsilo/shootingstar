@@ -104,14 +104,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c388ef6e353dc42b24b94e6d46034e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossHP: 30
-  phase2HP: 20
-  phase3HP: 10
+  bossHP: 200
+  phase2HP: 120
+  phase3HP: 50
   shot: 50
   speed: 100
   bullet: {fileID: 1309966409031316, guid: ac058a35bf7905f4daa413f57fb4c5d7, type: 2}
   boss1: {fileID: 1783465033995532}
-  plane: {fileID: 0}
+  plane: {fileID: 1507758412787382, guid: b416ae9adf9fc0a479f34c189bd944f9, type: 2}
+  explosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
   shotAngle: 0.05
   shotAngleRate: 0.0001
 --- !u!212 &212880829965178512

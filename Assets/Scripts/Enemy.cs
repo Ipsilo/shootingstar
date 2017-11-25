@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour{
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision){
-		if (collision.CompareTag ("Player Missile")) {
+		if (collision.CompareTag ("Missile")) {
 			Debug.Log ("미사일과 충돌");
 			enemyData.decreaseHP (10);
 		}
