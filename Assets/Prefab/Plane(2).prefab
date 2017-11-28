@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1507758412787382}
   m_IsPrefabParent: 1
+--- !u!1 &1288020521977754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4684440163938936}
+  m_Layer: 0
+  m_Name: MissileLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1507758412787382
 GameObject:
   m_ObjectHideFlags: 0
@@ -53,11 +68,25 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1507758412787382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.156, y: -1.764, z: 0}
-  m_LocalScale: {x: 0.15120575, y: 0.26391426, z: 1}
+  m_LocalPosition: {x: 0.16, y: -4.56, z: 0}
+  m_LocalScale: {x: 0.30369434, y: 0.5284029, z: 1}
   m_Children:
+  - {fileID: 4684440163938936}
   - {fileID: 4691116852208912}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4684440163938936
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288020521977754}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4155165705456382}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4691116852208912
@@ -71,7 +100,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4155165705456382}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &70180735787286706
 CapsuleCollider2D:
@@ -85,8 +114,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0011344049, y: -0.02585154}
-  m_Size: {x: 0.80524397, y: 1.4521555}
+  m_Offset: {x: -0.027264677, y: -0.025851566}
+  m_Size: {x: 1.4300267, y: 1.4521555}
   m_Direction: 0
 --- !u!114 &114014844028459692
 MonoBehaviour:
