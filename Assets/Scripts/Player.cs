@@ -15,12 +15,12 @@ public class Player : MonoBehaviour {
         if (col.CompareTag("Bullet") || col.CompareTag("Enemy"))
         {
             Debug.Log("불릿과 충돌");
-<<<<<<< HEAD
+
             Destroy(col.gameObject);
             Destroy(this.gameObject);
-=======
+
             GameControll.health -= 1;
->>>>>>> c8c828cae5f9d3007bca41e320785079da0f9a56
+
         }
     }
 
