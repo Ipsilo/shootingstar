@@ -17,7 +17,7 @@ public class Player : MonoBehaviour {
             Debug.Log("불릿과 충돌");
 
             Destroy(col.gameObject);
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
 
             GameControll.health -= 1;
 
