@@ -26,6 +26,7 @@ public class MemoryPool : IEnumerable, System.IDisposable
     //------------------------------------------------------------------------------------
     // 열거자 기본 재정의(foreach에서 사용하는 것인데 우리는 사용하지 않음, 이유는 나중에..)
     //------------------------------------------------------------------------------------
+    
     public IEnumerator GetEnumerator()
     {
         if (table == null)    // 만약 table이 객체화 되지 않았다면?
@@ -43,6 +44,7 @@ public class MemoryPool : IEnumerable, System.IDisposable
                 yield return item.gameObject; // 현 item의 오브젝트를 반환
         }
     }
+    
 
     //-------------------------------------------------------------------------------------
     // 메모리 풀 생성
